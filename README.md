@@ -1,5 +1,4 @@
 # ThinkTankAdvisor
-<<<<<<< HEAD
 
 > 05-智库-ThinkTank 行业 Web 项目 · 内部代号 ThinkTankAdvisor
 
@@ -13,6 +12,6 @@
 ## 自动化
 - T4 每日 02:00 检查项目并更新开发计划
 - T5 每日 03:00 完成小步开发并 commit + push
-=======
-ThinkTankAdvisor - 05-智库-ThinkTank 行业 Web 项目
->>>>>>> github/main
+
+## 变更记录
+- 2026-08-25 · 修复 README.md git 冲突标记(保留 HEAD 详细版)
