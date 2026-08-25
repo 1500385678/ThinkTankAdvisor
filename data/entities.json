@@ -1,0 +1,402 @@
+[
+  {
+    "id": "e001",
+    "name": "孙子兵法",
+    "type": "book",
+    "category": "东方战略",
+    "source": "_ThinkTankLib/01_孙子兵法/孙子兵法.md",
+    "period": "春秋末期(约前 515-前 470)",
+    "tags": ["战略", "东方", "军事"],
+    "abstract": "中国现存最早的兵书,13 篇系统论述战争本质/战略/战术/情报。",
+    "relations": [
+      {"type": "authored_by", "target_id": "e011"},
+      {"type": "applies_to", "target_id": "e031"},
+      {"type": "concepts", "target_id": "e021"}
+    ]
+  },
+  {
+    "id": "e002",
+    "name": "战争论",
+    "type": "book",
+    "category": "西方战略",
+    "source": "_ThinkTankLib/02_战争论/战争论.md",
+    "period": "19 世纪(1832 年遗稿出版)",
+    "tags": ["战略", "西方", "军事"],
+    "abstract": "克劳塞维茨阐述'战争是政治的延续'与'摩擦论'的经典理论。",
+    "relations": [
+      {"type": "authored_by", "target_id": "e012"},
+      {"type": "concepts", "target_id": "e022"}
+    ]
+  },
+  {
+    "id": "e003",
+    "name": "论语",
+    "type": "book",
+    "category": "儒家思想",
+    "source": "_ThinkTankLib/03_论语/论语.md",
+    "period": "春秋末期(约前 551-前 479)",
+    "tags": ["儒家", "领导力", "伦理"],
+    "abstract": "孔子与弟子的言行记录,儒家治国/修身/管理的元典。",
+    "relations": [
+      {"type": "authored_by", "target_id": "e013"},
+      {"type": "concepts", "target_id": "e023"}
+    ]
+  },
+  {
+    "id": "e004",
+    "name": "老子道德经",
+    "type": "book",
+    "category": "道家思想",
+    "source": "_ThinkTankLib/04_老子道德经/老子道德经.md",
+    "period": "春秋末期",
+    "tags": ["道家", "系统思维", "辩证"],
+    "abstract": "老子阐述'道/德/无为'的哲学体系,5000 言微言大义。",
+    "relations": [
+      {"type": "authored_by", "target_id": "e014"},
+      {"type": "concepts", "target_id": "e024"}
+    ]
+  },
+  {
+    "id": "e005",
+    "name": "鬼谷子",
+    "type": "book",
+    "category": "纵横家",
+    "source": "_ThinkTankLib/05_鬼谷子/鬼谷子.md",
+    "period": "战国中期(约前 4 世纪)",
+    "tags": ["纵横", "谈判", "说服"],
+    "abstract": "鬼谷子讲捭阖/反应/内楗/揣摩等游说与博弈技巧。",
+    "relations": [
+      {"type": "authored_by", "target_id": "e015"},
+      {"type": "applies_to", "target_id": "e032"}
+    ]
+  },
+  {
+    "id": "e006",
+    "name": "韩非子",
+    "type": "book",
+    "category": "法家思想",
+    "source": "_ThinkTankLib/06_韩非子/韩非子.md",
+    "period": "战国末期(约前 280-前 233)",
+    "tags": ["法家", "制度", "管理"],
+    "abstract": "韩非集法家之大成,讲法术势结合的中央集权治理体系。",
+    "relations": [
+      {"type": "authored_by", "target_id": "e016"},
+      {"type": "concepts", "target_id": "e025"}
+    ]
+  },
+  {
+    "id": "e007",
+    "name": "资治通鉴",
+    "type": "book",
+    "category": "历史智慧",
+    "source": "_ThinkTankLib/07_资治通鉴/资治通鉴.md",
+    "period": "北宋(1084 年成书)",
+    "tags": ["历史", "治国", "案例"],
+    "abstract": "司马光编年体通史,1362 年/294 卷,兴衰治乱全案例库。",
+    "relations": [
+      {"type": "authored_by", "target_id": "e017"},
+      {"type": "applies_to", "target_id": "e033"}
+    ]
+  },
+  {
+    "id": "e008",
+    "name": "三十六计",
+    "type": "book",
+    "category": "兵法计谋",
+    "source": "_ThinkTankLib/08_三十六计/三十六计.md",
+    "period": "明清(成书于明清之际)",
+    "tags": ["计谋", "竞争", "博弈"],
+    "abstract": "胜战/敌战/攻战/混战/并战/败战 6 套 36 计数。",
+    "relations": [
+      {"type": "applies_to", "target_id": "e032"},
+      {"type": "applies_to", "target_id": "e034"}
+    ]
+  },
+  {
+    "id": "e009",
+    "name": "西方战略经典",
+    "type": "book",
+    "category": "西方战略",
+    "source": "_ThinkTankLib/09_西方战略经典/西方战略经典.md",
+    "period": "16-20 世纪",
+    "tags": ["战略", "西方", "管理"],
+    "abstract": "马基雅维利《君主论》/李德·哈特《战略论》/肯尼斯·博尔丁《大战略》三书合集。",
+    "relations": [
+      {"type": "authored_by", "target_id": "e018"},
+      {"type": "related_to", "target_id": "e002"}
+    ]
+  },
+  {
+    "id": "e010",
+    "name": "现代战略思想",
+    "type": "book",
+    "category": "现代战略",
+    "source": "_ThinkTankLib/10_现代战略思想/现代战略思想.md",
+    "period": "20 世纪末至今",
+    "tags": ["创新", "蓝海", "转型"],
+    "abstract": "《创新者的窘境》/《蓝海战略》/《从优秀到卓越》三书合集,商业战略经典。",
+    "relations": [
+      {"type": "authored_by", "target_id": "e019"},
+      {"type": "applies_to", "target_id": "e035"}
+    ]
+  },
+  {
+    "id": "e011",
+    "name": "孙武",
+    "type": "person",
+    "category": "军事家",
+    "source": "e001",
+    "period": "春秋末期",
+    "tags": ["兵圣", "吴国"],
+    "abstract": "齐国人,吴王阖闾任为将军,著《孙子兵法》十三篇。",
+    "relations": [
+      {"type": "authored", "target_id": "e001"}
+    ]
+  },
+  {
+    "id": "e012",
+    "name": "克劳塞维茨",
+    "type": "person",
+    "category": "军事理论家",
+    "source": "e002",
+    "period": "1780-1831",
+    "tags": ["普鲁士", "军事理论"],
+    "abstract": "普鲁士将军,《战争论》遗作构建现代战争哲学。",
+    "relations": [
+      {"type": "authored", "target_id": "e002"}
+    ]
+  },
+  {
+    "id": "e013",
+    "name": "孔子",
+    "type": "person",
+    "category": "思想家",
+    "source": "e003",
+    "period": "前 551-前 479",
+    "tags": ["儒家", "至圣先师"],
+    "abstract": "鲁国人,儒家创始人,周游列国十四年。",
+    "relations": [
+      {"type": "authored", "target_id": "e003"}
+    ]
+  },
+  {
+    "id": "e014",
+    "name": "老子",
+    "type": "person",
+    "category": "思想家",
+    "source": "e004",
+    "period": "约前 571-前 471",
+    "tags": ["道家", "哲学"],
+    "abstract": "李耳,道家创始人,《道德经》作者(传)。",
+    "relations": [
+      {"type": "authored", "target_id": "e004"}
+    ]
+  },
+  {
+    "id": "e015",
+    "name": "王诩(鬼谷子)",
+    "type": "person",
+    "category": "纵横家",
+    "source": "e005",
+    "period": "约前 4 世纪",
+    "tags": ["纵横家", "隐士"],
+    "abstract": "传说中纵横家鼻祖,授张仪/苏秦/孙膑/庞涓。",
+    "relations": [
+      {"type": "authored", "target_id": "e005"}
+    ]
+  },
+  {
+    "id": "e016",
+    "name": "韩非",
+    "type": "person",
+    "category": "思想家",
+    "source": "e006",
+    "period": "约前 280-前 233",
+    "tags": ["法家", "韩国公子"],
+    "abstract": "韩国公子,集法家大成,死于秦国狱中。",
+    "relations": [
+      {"type": "authored", "target_id": "e006"}
+    ]
+  },
+  {
+    "id": "e017",
+    "name": "司马光",
+    "type": "person",
+    "category": "史学家",
+    "source": "e007",
+    "period": "1019-1086",
+    "tags": ["北宋", "宰相"],
+    "abstract": "北宋政治家/史学家,主编《资治通鉴》19 年。",
+    "relations": [
+      {"type": "authored", "target_id": "e007"}
+    ]
+  },
+  {
+    "id": "e018",
+    "name": "马基雅维利",
+    "type": "person",
+    "category": "政治思想家",
+    "source": "e009",
+    "period": "1469-1527",
+    "tags": ["意大利", "现实政治"],
+    "abstract": "意大利政治思想家,《君主论》奠基现实政治学派。",
+    "relations": [
+      {"type": "authored", "target_id": "e009"}
+    ]
+  },
+  {
+    "id": "e019",
+    "name": "克莱顿·克里斯滕森",
+    "type": "person",
+    "category": "管理学者",
+    "source": "e010",
+    "period": "1952-2020",
+    "tags": ["哈佛", "颠覆式创新"],
+    "abstract": "哈佛商学院教授,《创新者的窘境》提出颠覆式创新理论。",
+    "relations": [
+      {"type": "authored", "target_id": "e010"}
+    ]
+  },
+  {
+    "id": "e021",
+    "name": "知己知彼",
+    "type": "concept",
+    "category": "战略原则",
+    "source": "e001",
+    "tags": ["情报", "决策"],
+    "abstract": "《孙子兵法·谋攻篇》核心原则:'知彼知己,百战不殆'。",
+    "relations": [
+      {"type": "from", "target_id": "e001"}
+    ]
+  },
+  {
+    "id": "e022",
+    "name": "战争是政治的延续",
+    "type": "concept",
+    "category": "战略原则",
+    "source": "e002",
+    "tags": ["政治优先", "战争本质"],
+    "abstract": "克劳塞维茨核心命题,战争服务于政治目标。",
+    "relations": [
+      {"type": "from", "target_id": "e002"}
+    ]
+  },
+  {
+    "id": "e023",
+    "name": "仁政",
+    "type": "concept",
+    "category": "治理原则",
+    "source": "e003",
+    "tags": ["德治", "民本"],
+    "abstract": "孔子主张'为政以德',以道德感化而非严刑峻法。",
+    "relations": [
+      {"type": "from", "target_id": "e003"}
+    ]
+  },
+  {
+    "id": "e024",
+    "name": "无为而治",
+    "type": "concept",
+    "category": "治理原则",
+    "source": "e004",
+    "tags": ["道家", "授权"],
+    "abstract": "老子主张'无为',减少干预,让系统自组织演化。",
+    "relations": [
+      {"type": "from", "target_id": "e004"},
+      {"type": "related_to", "target_id": "e026"}
+    ]
+  },
+  {
+    "id": "e025",
+    "name": "法术势",
+    "type": "concept",
+    "category": "治理原则",
+    "source": "e006",
+    "tags": ["法家", "集权"],
+    "abstract": "韩非总结的中央集权三要素:法(制度)/术(权术)/势(权威)。",
+    "relations": [
+      {"type": "from", "target_id": "e006"}
+    ]
+  },
+  {
+    "id": "e026",
+    "name": "蓝海战略",
+    "type": "concept",
+    "category": "现代战略",
+    "source": "e010",
+    "tags": ["创新", "差异化"],
+    "abstract": "W.钱·金/勒妮·莫博尼提出,跳出红海竞争、开创无人市场。",
+    "relations": [
+      {"type": "from", "target_id": "e010"}
+    ]
+  },
+  {
+    "id": "e031",
+    "name": "柏举之战",
+    "type": "event",
+    "category": "古代战役",
+    "source": "e001",
+    "period": "前 506 年",
+    "tags": ["吴楚", "以少胜多"],
+    "abstract": "孙武以 3 万吴军破 20 万楚军,五战入郢,《孙子兵法》实战首秀。",
+    "relations": [
+      {"type": "involves", "target_id": "e011"},
+      {"type": "applies", "target_id": "e021"}
+    ]
+  },
+  {
+    "id": "e032",
+    "name": "合纵连横",
+    "type": "event",
+    "category": "外交博弈",
+    "source": "e005",
+    "period": "前 4-前 3 世纪",
+    "tags": ["战国", "外交"],
+    "abstract": "苏秦合纵六国抗秦/张仪连横破盟,纵横家巅峰对决。",
+    "relations": [
+      {"type": "involves", "target_id": "e015"},
+      {"type": "applies", "target_id": "e005"}
+    ]
+  },
+  {
+    "id": "e033",
+    "name": "贞观之治",
+    "type": "event",
+    "category": "治国范例",
+    "source": "e007",
+    "period": "627-649",
+    "tags": ["唐太宗", "盛世"],
+    "abstract": "李世民治国典范:纳谏/轻徭/用贤/以史为鉴,被《资治通鉴》详录。",
+    "relations": [
+      {"type": "from", "target_id": "e007"},
+      {"type": "applies", "target_id": "e023"}
+    ]
+  },
+  {
+    "id": "e034",
+    "name": "柯达之死",
+    "type": "event",
+    "category": "商业案例",
+    "source": "e010",
+    "period": "1975-2012",
+    "tags": ["颠覆式创新", "转型失败"],
+    "abstract": "发明数码相机却自我颠覆失败,2012 年破产,《创新者的窘境》经典反例。",
+    "relations": [
+      {"type": "applies", "target_id": "e026"},
+      {"type": "from", "target_id": "e019"}
+    ]
+  },
+  {
+    "id": "e035",
+    "name": "西南航空蓝海",
+    "type": "event",
+    "category": "商业案例",
+    "source": "e010",
+    "period": "1971 至今",
+    "tags": ["蓝海", "低成本"],
+    "abstract": "西南航空避开大航空枢纽,聚焦短途点对点,40 年持续盈利。",
+    "relations": [
+      {"type": "applies", "target_id": "e026"}
+    ]
+  }
+]
