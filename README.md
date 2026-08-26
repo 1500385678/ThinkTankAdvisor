@@ -1,17 +1,53 @@
 # ThinkTankAdvisor
 
 > 05-智库-ThinkTank 行业 Web 项目 · 内部代号 ThinkTankAdvisor
+> 立项:2026-08-23 · 当前:Phase 0 资产盘点中
 
 ## 项目说明
-基于张勇的 36 行业架构,ThinkTankAdvisor 是 智库-ThinkTank 行业的 Web 端顾问产品。
+基于张勇的 36 行业架构,ThinkTankAdvisor 是 **智库-ThinkTank** 行业的 Web 端顾问产品。
+定位"政策研究者/企业战略师/投资人"三件套:研究方法 + 分析框架 + 行业简报。
+
+## 项目状态
+
+### Phase 进度(2026-08-27 巡检)
+
+| Phase | 任务 | 进度 | 状态 |
+|-------|------|------|------|
+| **Phase 0 · 资产盘点** | 10 主题索引 | 1/6 | ✅ |
+| | 50+ 实体抽取 | 30/50(60%) | 🟡 进行中 |
+| | 图谱 schema | 0/6 | ⚪ 未启动 |
+| | 议题分析框架模板 | 0/6 | ⚪ 未启动 |
+| | 报告模板库 | 0/6 | ⚪ 未启动 |
+| | SQLite → PG/Neo4j 迁移 | 0/6 | ⚪ 未启动 |
+| **Phase 1 · MVP** | FastAPI 骨架 | 0/7 | ⚪ 未启动 |
+| | React 前端 | 0/7 | ⚪ 未启动 |
+| | 图谱可视化 | 0/7 | ⚪ 未启动 |
+| | 议题分析引擎 | 0/7 | ⚪ 未启动 |
+| | 报告生成器 | 0/7 | ⚪ 未启动 |
+| | 飞书 OAuth | 0/7 | ⚪ 未启动 |
+| | Docker Compose | 0/7 | ⚪ 未启动 |
+
+### 知识资产
+- **10 大主题索引**:`data/topics_index.json` ✅
+- **图谱实体集**:`data/entities.json` · 30 实体 / 4 类型(book/person/concept/event) / 7 关系 / 60% 完成
+- **方法论文档**:`_ThinkTankLib/01-10` 10 大主题 md
+- **总纲**:`项目开发计划.md`(8.2 KB,v1.0) · **细则**:`智库顾问开发架构与计划.md`(20.6 KB,v1.0)
+
+## 巡检历史
+- 2026-08-27 · 实体抽取 60%,待补 20 实体 + 整合双计划 → [.Log/巡检-智库-20260827.md](.Log/巡检-智库-20260827.md)
+- 2026-08-26 · 新增详细版架构方案,双计划并存待整合 → [.Log/巡检-智库-20260826.md](.Log/巡检-智库-20260826.md)
+- 2026-08-25 · 修复 README.md git 冲突 → [.Log/巡检-智库-20260825.md](.Log/巡检-智库-20260825.md)
 
 ## 同步
 - GitHub: https://github.com/1500385678/ThinkTankAdvisor
 - Gitee: https://gitee.com/architectzy/ThinkTankAdvisor
 
 ## 自动化
-- T4 每日 02:00 检查项目并更新开发计划
-- T5 每日 03:00 完成小步开发并 commit + push
+- T1 每日 00:00 大计划协调
+- T4 每日 02:00 项目巡检 + 写次日 plan
+- T5 每日 03:00 小步开发 + commit + push
 
 ## 变更记录
+- 2026-08-27 · .gitignore 完善(屏蔽 .plan/ .env* .db 等) + README 加 Phase 进度条
+- 2026-08-26 · 新增 `data/entities.json` 30 实体/4 类型/46 关系
 - 2026-08-25 · 修复 README.md git 冲突标记(保留 HEAD 详细版)

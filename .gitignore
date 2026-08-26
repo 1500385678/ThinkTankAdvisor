@@ -1,5 +1,38 @@
+# 系统
 .DS_Store
+Thumbs.db
+
+# 日志
 *.log
-node_modules/
-.venv/
+
+# Python
 __pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# Node
+node_modules/
+dist/
+build/
+
+# 数据/DB
+*.db
+*.sqlite
+data/*.json.bak
+
+# 环境配置
+.env
+.env.*
+!.env.example
+
+# 临时工作区
+.plan/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
