@@ -398,5 +398,274 @@
     "relations": [
       {"type": "applies", "target_id": "e026"}
     ]
+  },
+  {
+    "id": "e020",
+    "name": "张勇",
+    "type": "person",
+    "category": "智库架构师",
+    "source": "ThinkTankAdvisor",
+    "period": "活跃期 2015-今",
+    "tags": ["智库", "战略", "方法论", "36行业"],
+    "abstract": "ThinkTankAdvisor 发起人,系统整理政策研究/战略分析/智库产品/影响力建设/跨学科整合 5 大方法论图谱,主导 36 行业顾问架构。",
+    "relations": [
+      {"type": "authored", "target_id": "e030"},
+      {"type": "related_to", "target_id": "e019"}
+    ]
+  },
+  {
+    "id": "e027",
+    "name": "颠覆式创新",
+    "type": "concept",
+    "category": "创新理论",
+    "source": "e019",
+    "tags": ["颠覆", "低端", "新市场"],
+    "abstract": "克里斯坦森《创新者的窘境》提出:维持性技术无法应对颠覆性技术,领先企业常因此失败(柯达/诺基亚/摩托罗拉)。",
+    "relations": [
+      {"type": "from", "target_id": "e019"},
+      {"type": "applies_to", "target_id": "e034"}
+    ]
+  },
+  {
+    "id": "e028",
+    "name": "PESTLE 分析",
+    "type": "concept",
+    "category": "分析框架",
+    "source": "frameworks",
+    "tags": ["宏观环境", "智库", "咨询"],
+    "abstract": "Political/Economic/Social/Technological/Legal/Environmental 六维度宏观环境扫描,智库与战略咨询通用框架。",
+    "relations": [
+      {"type": "applies_to", "target_id": "e036"},
+      {"type": "applies_to", "target_id": "e037"}
+    ]
+  },
+  {
+    "id": "e029",
+    "name": "波特五力",
+    "type": "concept",
+    "category": "分析框架",
+    "source": "frameworks",
+    "tags": ["竞争结构", "行业分析"],
+    "abstract": "迈克尔·波特 1979 提出:供应商议价/购买者议价/新进入者威胁/替代品威胁/现有竞争者五力决定行业竞争结构。",
+    "relations": [
+      {"type": "applies_to", "target_id": "e035"},
+      {"type": "related_to", "target_id": "e046"}
+    ]
+  },
+  {
+    "id": "e030",
+    "name": "知识图谱",
+    "type": "concept",
+    "category": "技术架构",
+    "source": "ThinkTankAdvisor",
+    "tags": ["图谱", "实体-关系", "可视化"],
+    "abstract": "实体(Entity)+关系(Relation)+属性(Attribute)三元组结构,Phase 1 核心技术,Cytoscape.js/D3.js 可视化。",
+    "relations": [
+      {"type": "applies_to", "target_id": "e044"},
+      {"type": "related_to", "target_id": "e020"}
+    ]
+  },
+  {
+    "id": "e036",
+    "name": "改革开放",
+    "type": "event",
+    "category": "中国政策",
+    "source": "policy_cases",
+    "period": "1978-今",
+    "tags": ["邓小平", "市场经济", "转型"],
+    "abstract": "1978 十一届三中全会启动,家庭联产承包/特区设立/国企改革/入世,40 余年 GDP 增长 40 倍。",
+    "relations": [
+      {"type": "applies", "target_id": "e022"},
+      {"type": "from", "target_id": "e017"}
+    ]
+  },
+  {
+    "id": "e037",
+    "name": "双碳目标",
+    "type": "event",
+    "category": "中国政策",
+    "source": "policy_cases",
+    "period": "2020-2060",
+    "tags": ["碳达峰", "碳中和", "能源转型"],
+    "abstract": "2020 习近平宣布 2030 碳达峰/2060 碳中和,推动能源结构/产业体系/生活方式系统性转型。",
+    "relations": [
+      {"type": "applies", "target_id": "e028"},
+      {"type": "related_to", "target_id": "e043"}
+    ]
+  },
+  {
+    "id": "e038",
+    "name": "脱贫攻坚",
+    "type": "event",
+    "category": "中国政策",
+    "source": "policy_cases",
+    "period": "2013-2021",
+    "tags": ["精准扶贫", "乡村振兴"],
+    "abstract": "8 年累计 9899 万农村贫困人口脱贫,832 个贫困县摘帽,12.8 万个贫困村出列,人类减贫史奇迹。",
+    "relations": [
+      {"type": "applies", "target_id": "e023"},
+      {"type": "from", "target_id": "e017"}
+    ]
+  },
+  {
+    "id": "e039",
+    "name": "入世谈判",
+    "type": "event",
+    "category": "中国政策",
+    "source": "policy_cases",
+    "period": "1986-2001",
+    "tags": ["WTO", "朱镕基", "全球化"],
+    "abstract": "1986 申请复关→2001 入世,15 年 37 国双边谈判,深度融入全球产业链,出口 25 年增 35 倍。",
+    "relations": [
+      {"type": "applies", "target_id": "e022"},
+      {"type": "from", "target_id": "e007"}
+    ]
+  },
+  {
+    "id": "e040",
+    "name": "三峡工程论证",
+    "type": "event",
+    "category": "中国政策",
+    "source": "policy_cases",
+    "period": "1992-2006",
+    "tags": ["重大工程", "民主决策"],
+    "abstract": "孙中山 1919 构想→1992 全国人大表决通过→2006 全面建成,论证 70 年/反对 400 人政协联署,民主决策典范。",
+    "relations": [
+      {"type": "applies", "target_id": "e049"},
+      {"type": "from", "target_id": "e007"}
+    ]
+  },
+  {
+    "id": "e041",
+    "name": "罗斯福新政",
+    "type": "event",
+    "category": "美国政策",
+    "source": "policy_cases",
+    "period": "1933-1939",
+    "tags": ["大萧条", "凯恩斯", "政府干预"],
+    "abstract": "应对 1929-1933 大萧条,以百日新政/银行改革/以工代赈/证券监管重建美国,凯恩斯主义实践开端。",
+    "relations": [
+      {"type": "applies", "target_id": "e022"},
+      {"type": "from", "target_id": "e002"}
+    ]
+  },
+  {
+    "id": "e042",
+    "name": "里根革命",
+    "type": "event",
+    "category": "美国政策",
+    "source": "policy_cases",
+    "period": "1981-1989",
+    "tags": ["减税", "去监管", "冷战"],
+    "abstract": "供给学派革命:减税 25%/放松管制/反通胀/星球大战计划拖垮苏联,新自由主义全球范式。",
+    "relations": [
+      {"type": "applies", "target_id": "e022"},
+      {"type": "related_to", "target_id": "e036"}
+    ]
+  },
+  {
+    "id": "e043",
+    "name": "巴黎协定",
+    "type": "event",
+    "category": "全球治理",
+    "source": "policy_cases",
+    "period": "2015-今",
+    "tags": ["气候", "多边", "碳预算"],
+    "abstract": "2015 COP21 通过,196 缔约方承诺将全球升温控制在 2°C 以内(努力 1.5°C),NDC 国家自主贡献机制。",
+    "relations": [
+      {"type": "applies", "target_id": "e028"},
+      {"type": "related_to", "target_id": "e037"}
+    ]
+  },
+  {
+    "id": "e044",
+    "name": "系统思考",
+    "type": "concept",
+    "category": "方法论",
+    "source": "cross_disciplinary",
+    "tags": ["反馈环", "基模", "延迟"],
+    "abstract": "彼得·圣吉《第五项修炼》核心:看整体而非局部/看动态而非静态/看反馈环而非线性,识别增长上限/舍本逐末等基模。",
+    "relations": [
+      {"type": "applies_to", "target_id": "e040"},
+      {"type": "related_to", "target_id": "e024"}
+    ]
+  },
+  {
+    "id": "e045",
+    "name": "MECE 原则",
+    "type": "concept",
+    "category": "分析方法",
+    "source": "frameworks",
+    "tags": ["麦肯锡", "分类", "结构化"],
+    "abstract": "Mutually Exclusive Collectively Exhausted 相互独立完全穷尽,麦肯锡结构化思维基石,金字塔原理前序方法。",
+    "relations": [
+      {"type": "applies_to", "target_id": "e028"},
+      {"type": "applies_to", "target_id": "e029"}
+    ]
+  },
+  {
+    "id": "e046",
+    "name": "钻石模型",
+    "type": "concept",
+    "category": "分析框架",
+    "source": "frameworks",
+    "tags": ["国家竞争", "波特", "产业集群"],
+    "abstract": "波特 1990《国家竞争优势》提出:生产要素/需求条件/相关与支持产业/企业战略结构 4 要素 + 政府/机会 2 变量。",
+    "relations": [
+      {"type": "related_to", "target_id": "e029"},
+      {"type": "applies_to", "target_id": "e036"}
+    ]
+  },
+  {
+    "id": "e047",
+    "name": "多源流框架",
+    "type": "concept",
+    "category": "政策理论",
+    "source": "policy_research",
+    "tags": ["金顿", "议程设置", "政策窗口"],
+    "abstract": "约翰·金顿 1984:问题流/政策流/政治流三源流耦合时政策窗口打开,解释为何某些问题突然被提上议程。",
+    "relations": [
+      {"type": "applies_to", "target_id": "e037"},
+      {"type": "applies_to", "target_id": "e038"}
+    ]
+  },
+  {
+    "id": "e048",
+    "name": "渐进决策模型",
+    "type": "concept",
+    "category": "政策理论",
+    "source": "policy_research",
+    "tags": ["林德布洛姆", "渐进主义", "边际调整"],
+    "abstract": "林德布洛姆《渐进调适》:政策是过去政策的边际调整而非理性重构,反对乌托邦式全面改革。",
+    "relations": [
+      {"type": "applies_to", "target_id": "e041"},
+      {"type": "related_to", "target_id": "e049"}
+    ]
+  },
+  {
+    "id": "e049",
+    "name": "政策周期",
+    "type": "concept",
+    "category": "政策理论",
+    "source": "policy_research",
+    "tags": ["议程", "制定", "执行", "评估"],
+    "abstract": "拉斯韦尔 5 阶段:议程设置→政策制定→政策执行→政策评估→政策终结,后增政策学习/政策变化,公共政策通用骨架。",
+    "relations": [
+      {"type": "applies_to", "target_id": "e040"},
+      {"type": "related_to", "target_id": "e048"}
+    ]
+  },
+  {
+    "id": "e050",
+    "name": "知识管理",
+    "type": "concept",
+    "category": "智库方法",
+    "source": "thinktank_product",
+    "tags": ["智库", "SECI", "隐性-显性"],
+    "abstract": "野中郁次郎 SECI 模型:社会化/外化/组合/内化,隐性↔显性知识螺旋转化,智库核心能力建设方法。",
+    "relations": [
+      {"type": "applies_to", "target_id": "e030"},
+      {"type": "related_to", "target_id": "e020"}
+    ]
   }
 ]
