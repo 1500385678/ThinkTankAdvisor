@@ -4,6 +4,8 @@ Thumbs.db
 
 # 日志
 *.log
+# 例外: .Log/ 是项目巡检目录(每日 markdown 报告),刻意跟踪,非运行时日志
+!.Log/
 
 # Python
 __pycache__/
