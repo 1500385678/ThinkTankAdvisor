@@ -1,0 +1,108 @@
+{
+  "version": "0.1.0",
+  "created_at": "2026-09-01",
+  "status": "draft",
+  "note": "Phase 0 #3 起步。现有 data/entities.json 50 实体待后续按本 schema 迁移。",
+  "entity": {
+    "description": "知识图谱实体顶层。type 决定子字段;book/person/concept/event 4 类。",
+    "version": "0.1.0",
+    "fields": {
+      "id": {"type": "string", "required": true, "pattern": "^e\\d{3,}$", "example": "e001"},
+      "name": {"type": "string", "required": true, "example": "孙子兵法"},
+      "type": {"type": "enum", "required": true, "values": ["book", "person", "concept", "event"], "example": "book"},
+      "category": {"type": "string", "required": false, "example": "东方战略"},
+      "source": {"type": "string", "required": true, "example": "_ThinkTankLib/01_孙子兵法/孙子兵法.md"},
+      "period": {"type": "string", "required": false, "example": "春秋末期(约前 515-前 470)"},
+      "tags": {"type": "array<string>", "required": false, "example": ["战略", "东方", "军事"]},
+      "abstract": {"type": "string", "required": true, "max_length": 500, "example": "中国现存最早的兵书,13 篇系统论述战争本质/战略/战术/情报。"},
+      "relations": {
+        "type": "array<relation_ref>",
+        "required": false,
+        "schema": {"type": "string", "target_id": "string"},
+        "example": [{"type": "authored_by", "target_id": "e011"}]
+      }
+    },
+    "type_overrides": {
+      "book": {"extra_fields": ["author_id", "dynasty"]},
+      "person": {"extra_fields": ["birth_year", "death_year", "nationality"]},
+      "concept": {"extra_fields": ["origin_id", "applies_to_ids"]},
+      "event": {"extra_fields": ["event_date", "location"]}
+    },
+    "example": {
+      "id": "e001",
+      "name": "孙子兵法",
+      "type": "book",
+      "category": "东方战略",
+      "source": "_ThinkTankLib/01_孙子兵法/孙子兵法.md",
+      "period": "春秋末期(约前 515-前 470)",
+      "tags": ["战略", "东方", "军事"],
+      "abstract": "中国现存最早的兵书,13 篇系统论述战争本质/战略/战术/情报。",
+      "relations": [
+        {"type": "authored_by", "target_id": "e011"},
+        {"type": "applies_to", "target_id": "e031"},
+        {"type": "concepts", "target_id": "e021"}
+      ]
+    }
+  },
+  "relation": {
+    "description": "实体间关系。type 取自预定义 8 种,扩展需先增枚举。",
+    "version": "0.1.0",
+    "relation_types": [
+      {"type": "authored_by", "from": ["book"], "to": ["person"], "note": "X 由 Y 撰写"},
+      {"type": "authored", "from": ["person"], "to": ["book"], "note": "Y 撰写 X(反向)"},
+      {"type": "concepts", "from": ["book", "person"], "to": ["concept"], "note": "提出/蕴含概念"},
+      {"type": "applies_to", "from": ["book", "concept"], "to": ["event", "book"], "note": "应用于"},
+      {"type": "applies", "from": ["event", "book"], "to": ["book", "concept"], "note": "应用(反向)"},
+      {"type": "involves", "from": ["event"], "to": ["person", "book", "concept"], "note": "涉及"},
+      {"type": "from", "from": ["concept"], "to": ["concept"], "note": "派生/来自"},
+      {"type": "related_to", "from": ["book", "person", "concept", "event"], "to": ["book", "person", "concept", "event"], "note": "通用关联"}
+    ],
+    "fields": {
+      "type": {"type": "enum", "required": true, "ref": "relation.relation_types"},
+      "target_id": {"type": "string", "required": true, "ref": "entity.id"},
+      "weight": {"type": "number", "required": false, "range": [0, 1], "default": 1.0, "note": "关系强度,默认 1.0"},
+      "notes": {"type": "string", "required": false, "max_length": 200}
+    },
+    "example": {"type": "authored_by", "target_id": "e011", "weight": 1.0}
+  },
+  "event": {
+    "description": "时间线事件。与 entity.event 区分:本表为'独立大事件',不带 entity 包装,聚焦时间+地点+涉及。",
+    "version": "0.1.0",
+    "fields": {
+      "id": {"type": "string", "required": true, "pattern": "^ev\\d{3,}$", "example": "ev001"},
+      "name": {"type": "string", "required": true, "example": "邓小平南巡"},
+      "date": {"type": "string", "required": true, "format": "ISO 8601 or 模糊描述", "example": "1992-01-18 至 1992-02-21"},
+      "location": {"type": "string", "required": false, "example": "中国深圳/珠海/上海"},
+      "involves_id": {"type": "array<string>", "required": false, "ref": "entity.id", "note": "涉及实体 id 列表"},
+      "source_id": {"type": "string", "required": false, "ref": "source.id"},
+      "notes": {"type": "string", "required": false, "max_length": 1000}
+    },
+    "example": {
+      "id": "ev001",
+      "name": "邓小平南巡",
+      "date": "1992-01-18 至 1992-02-21",
+      "location": "中国深圳/珠海/上海",
+      "involves_id": ["e014"],
+      "notes": "确立社会主义市场经济体制,推动改革开放第二波。"
+    }
+  },
+  "source": {
+    "description": "数据来源溯源。每条 entity/event 应指向 1 个或多个 source,用于报告引文核验。",
+    "version": "0.1.0",
+    "fields": {
+      "id": {"type": "string", "required": true, "pattern": "^s\\d{3,}$", "example": "s001"},
+      "type": {"type": "enum", "required": true, "values": ["book", "article", "report", "web", "data", "other"], "example": "book"},
+      "title": {"type": "string", "required": true, "example": "孙子兵法(中华书局 2017 校注本)"},
+      "url": {"type": "string", "required": false, "format": "uri", "example": "https://example.com/sunzi"},
+      "published_at": {"type": "string", "required": false, "format": "ISO 8601 or 年代", "example": "2017"},
+      "reliability": {"type": "enum", "required": false, "values": ["high", "medium", "low"], "default": "medium", "note": "源公信力评级"}
+    },
+    "example": {
+      "id": "s001",
+      "type": "book",
+      "title": "孙子兵法(中华书局 2017 校注本)",
+      "published_at": "2017",
+      "reliability": "high"
+    }
+  }
+}
