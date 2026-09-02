@@ -1,8 +1,9 @@
 {
   "version": "0.1.0",
   "created_at": "2026-09-01",
-  "status": "draft",
-  "note": "Phase 0 #3 起步。现有 data/entities.json 50 实体待后续按本 schema 迁移。",
+  "completed_at": "2026-09-03",
+  "status": "complete",
+  "note": "50 实体已按本 schema 校验通过,迁移脚本 scripts/migrate_entities.py,0903 T5 闭环。",
   "entity": {
     "description": "知识图谱实体顶层。type 决定子字段;book/person/concept/event 4 类。",
     "version": "0.1.0",

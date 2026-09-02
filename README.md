@@ -9,13 +9,13 @@
 
 ## 项目状态
 
-### Phase 进度(2026-09-02 巡检)
+### Phase 进度(2026-09-03 巡检)
 
 | Phase | 任务 | 进度 | 状态 |
 |-------|------|------|------|
 | **Phase 0 · 资产盘点** | 10 主题索引 | 1/6 | ✅ |
 | | 50+ 实体抽取 | 50/50(100%) | ✅ 0828 完成 |
-| | 图谱 schema | 0.5/6 | 🟡 v0.1 草稿(0901) |
+| | 图谱 schema | 3/6 | ✅ v0.1 完成(0903 迁移闭环) |
 | | 议题分析框架模板 | 0/6 | ⚪ 未启动 |
 | | 报告模板库 | 0/6 | ⚪ 未启动 |
 | | SQLite → PG/Neo4j 迁移 | 0/6 | ⚪ 未启动 |
@@ -30,10 +30,12 @@
 ### 知识资产
 - **10 大主题索引**:`data/topics_index.json` ✅
 - **图谱实体集**:`data/entities.json` · 50 实体 / 4 类型(book 10 / person 10 / concept 17 / event 13) / 86 关系 / 8 关系类型
+- **图谱 schema**:`data/schema.json` v0.1 ✅(0903 闭环) · 迁移脚本:`scripts/migrate_entities.py` · 迁移输出:`data/entities_migrated.json`
 - **方法论文档**:`_ThinkTankLib/01-10` 10 大主题 md
 - **总纲**:`项目开发计划.md`(8.2 KB,v1.0) · **细则**:`智库顾问开发架构与计划.md`(20.6 KB,v1.0)
 
 ## 巡检历史
+- 2026-09-03 · 工作树 clean,0902 巡检待办 #1 闭环(5d4ea39 README 刷),Phase 0 #3 仍卡草稿,50 实体未迁移,双计划挂账 8 天 → [.Log/巡检-智库-20260903.md](.Log/巡检-智库-20260903.md)
 - 2026-09-02 · 工作树 clean,0901 schema.json v0.1 草稿业务首现(32e2796),Phase 0 进度 2.5/6(42%),README 表未刷挂账 1 天,0830 漏巡检挂账 3 天 → [.Log/巡检-智库-20260902.md](.Log/巡检-智库-20260902.md)
 - 2026-09-01 · 工作树 clean,无业务推进(0828 实体抽取后 4 天无新 commit),仅 inspect 巡检 → [.Log/巡检-智库-20260901.md](.Log/巡检-智库-20260901.md)
 - 2026-08-31 · `.gitignore fix` 已闭环(0828 bug 修),0830 漏巡检挂账,Phase 0/1 进度持平 → [.Log/巡检-智库-20260831.md](.Log/巡检-智库-20260831.md)
@@ -53,6 +55,7 @@
 - T5 每日 03:00 小步开发 + commit + push
 
 ## 变更记录
+- 2026-09-03 · 写 `scripts/migrate_entities.py` 跑通 50 实体按 schema v0.1 迁移(0 错误 / 86 关系),输出 `data/entities_migrated.json`,schema.status 升 "complete",Phase 0 #3 闭环(3/6 50%,巡检待办 #2 闭环)
 - 2026-09-02 · README Phase 进度表刷 schema v0.1 草稿状态(0.5/6 🟡)+ 巡检历史追加 0901/0902(巡检待办 #1 闭环)
 - 2026-09-01 · 起草 `data/schema.json` 知识图谱 4 顶层 schema 草稿(entity / relation / event / source,v0.1,0827 起挂账 #3 起步;待迁移 50 实体)
 - 2026-08-31 · README 巡检历史补 0829/0831 两条 + 变更记录补 0829 `.gitignore fix`(巡检待办 #2 闭环)
