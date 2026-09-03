@@ -9,14 +9,14 @@
 
 ## 项目状态
 
-### Phase 进度(2026-09-03 巡检)
+### Phase 进度(2026-09-04 巡检)
 
 | Phase | 任务 | 进度 | 状态 |
 |-------|------|------|------|
 | **Phase 0 · 资产盘点** | 10 主题索引 | 1/6 | ✅ |
 | | 50+ 实体抽取 | 50/50(100%) | ✅ 0828 完成 |
 | | 图谱 schema | 3/6 | ✅ v0.1 完成(0903 迁移闭环) |
-| | 议题分析框架模板 | 0/6 | ⚪ 未启动 |
+| | 议题分析框架模板 | 1/12(8%) | 🟡 0904 启动(PESTLE v1.0) |
 | | 报告模板库 | 0/6 | ⚪ 未启动 |
 | | SQLite → PG/Neo4j 迁移 | 0/6 | ⚪ 未启动 |
 | **Phase 1 · MVP** | FastAPI 骨架 | 0/7 | ⚪ 未启动 |
@@ -31,10 +31,12 @@
 - **10 大主题索引**:`data/topics_index.json` ✅
 - **图谱实体集**:`data/entities.json` · 50 实体 / 4 类型(book 10 / person 10 / concept 17 / event 13) / 86 关系 / 8 关系类型
 - **图谱 schema**:`data/schema.json` v0.1 ✅(0903 闭环) · 迁移脚本:`scripts/migrate_entities.py` · 迁移输出:`data/entities_migrated.json`
+- **议题分析框架库**:`templates/frameworks/`(0904 启动) · PESTLE v1.0 首版入库 · INDEX 12 框架进度表 1/12(8%)
 - **方法论文档**:`_ThinkTankLib/01-10` 10 大主题 md
 - **总纲**:`项目开发计划.md`(8.2 KB,v1.0) · **细则**:`智库顾问开发架构与计划.md`(20.6 KB,v1.0)
 
 ## 巡检历史
+- 2026-09-04 · 工作树 clean,0903 T5 落地 schema 迁移闭环(41c75c9 5 文件 1351 行),Phase 0 #3 闭环(3/6 50%),0830 漏巡检挂账 5 天,Phase 0 #4-#6 挂账 9 天,0904 T5 推进 #4 启动 PESTLE → [.Log/巡检-智库-20260904.md](.Log/巡检-智库-20260904.md)
 - 2026-09-03 · 工作树 clean,0902 巡检待办 #1 闭环(5d4ea39 README 刷),Phase 0 #3 仍卡草稿,50 实体未迁移,双计划挂账 8 天 → [.Log/巡检-智库-20260903.md](.Log/巡检-智库-20260903.md)
 - 2026-09-02 · 工作树 clean,0901 schema.json v0.1 草稿业务首现(32e2796),Phase 0 进度 2.5/6(42%),README 表未刷挂账 1 天,0830 漏巡检挂账 3 天 → [.Log/巡检-智库-20260902.md](.Log/巡检-智库-20260902.md)
 - 2026-09-01 · 工作树 clean,无业务推进(0828 实体抽取后 4 天无新 commit),仅 inspect 巡检 → [.Log/巡检-智库-20260901.md](.Log/巡检-智库-20260901.md)
@@ -55,6 +57,7 @@
 - T5 每日 03:00 小步开发 + commit + push
 
 ## 变更记录
+- 2026-09-04 · 建 `templates/frameworks/` 目录(0827 起 9 天挂账 Phase 0 #4 首次推进),PESTLE v1.0 首版入库(4309 字 / 6 维度 SOP / 因果矩阵 / 3 场景推演 / 质量自检 6 项),INDEX 12 框架进度表 1/12(8%),README Phase 进度表 #4 状态 0/6 ⚪ → 1/12 🟡,知识资产加 议题分析框架库 行,0827 起挂账的 Phase 0 #4 终于从 0 起步
 - 2026-09-03 · 写 `scripts/migrate_entities.py` 跑通 50 实体按 schema v0.1 迁移(0 错误 / 86 关系),输出 `data/entities_migrated.json`,schema.status 升 "complete",Phase 0 #3 闭环(3/6 50%,巡检待办 #2 闭环)
 - 2026-09-02 · README Phase 进度表刷 schema v0.1 草稿状态(0.5/6 🟡)+ 巡检历史追加 0901/0902(巡检待办 #1 闭环)
 - 2026-09-01 · 起草 `data/schema.json` 知识图谱 4 顶层 schema 草稿(entity / relation / event / source,v0.1,0827 起挂账 #3 起步;待迁移 50 实体)
